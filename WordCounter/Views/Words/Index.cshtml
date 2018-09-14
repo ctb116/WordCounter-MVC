@@ -2,8 +2,7 @@
 <ul>
 @foreach(var x in Model)
 {
-<li>@x.GetInput()</li>
-<li>@x.GetContent()</li>
+<li><a href='/wordcounter/@x.GetId()'>@x.GetInput()</a></li>
 }
 </ul>
 

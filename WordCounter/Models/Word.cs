@@ -7,6 +7,7 @@ namespace WordCounter.Models
   {
     private string _input;
     private string _content;
+    private int _id;
     private static List<Word> _instances = new List<Word> {};
 
     public Word (string input, string content)
@@ -14,6 +15,7 @@ namespace WordCounter.Models
       _input = input;
       _content = content;
       _instances.Add(this);
+      _id = _instances.Count;
     }
     public string GetInput()
     {
@@ -34,6 +36,14 @@ namespace WordCounter.Models
     public static List<Word> GetAll()
     {
       return _instances;
+    }
+    public int GetId()
+    {
+      return _id;
+    }
+    public static Word Find(int searchId)
+    {
+      return _instances[searchId-1];
     }
     // public void Save()
     // {

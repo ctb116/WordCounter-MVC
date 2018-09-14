@@ -28,5 +28,13 @@ namespace WordCounter.Controllers
       List<Word> allword = Word.GetAll();
       return View("Index", allword);
     }
+
+    [HttpGet("/wordcounter/{id}")]
+    public ActionResult Details(int id)
+    {
+      Word keyword = Word.Find(id);
+      return View(keyword);
+    }
+
   }
 }
