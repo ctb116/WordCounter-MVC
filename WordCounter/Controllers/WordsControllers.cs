@@ -11,7 +11,8 @@ namespace WordCounter.Controllers
     [HttpGet("/wordcounter")]
     public ActionResult Index()
     {
-      return View();
+      List<Word> allword = Word.GetAll();
+      return View(allword);
     }
 
     [HttpGet("/wordcounter/new")]

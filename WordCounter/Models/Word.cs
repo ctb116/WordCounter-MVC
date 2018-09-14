@@ -13,6 +13,7 @@ namespace WordCounter.Models
     {
       _input = input;
       _content = content;
+      _instances.Add(this);
     }
     public string GetInput()
     {
@@ -34,10 +35,10 @@ namespace WordCounter.Models
     {
       return _instances;
     }
-    public void Save()
-    {
-      _instances.Add(this);
-    }
+    // public void Save()
+    // {
+    //   _instances.Add(this);
+    // }
 
     // public int MatchCheck(string input)
     // {
