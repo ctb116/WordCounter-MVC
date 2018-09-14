@@ -37,11 +37,11 @@ namespace WordCounter.Controllers
     }
 
     [HttpPost("/wordcounter/{id}/count")]
-    public ActionResult Count(int id)
+    public ActionResult Count(int id, string input)
     {
       List<Word> allword = Word.GetAll();
       int find = id - 1;
-      allword[find].test();
+      allword[find].MatchCheck(input);
       return View("Details", allword[find]);
     }
   }

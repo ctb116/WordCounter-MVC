@@ -47,23 +47,21 @@ namespace WordCounter.Models
     {
       return _count;
     }
-    public void test()
-    {
-      _count += 10;
-    }
+
 
     public void MatchCheck(string input)
     {
       string[] contentList = Word.SplitContent(_content);
 
-      // int matchCount = 0;
+      int matchCount = 0;
       foreach(string word in contentList)
       {
         if ((word.ToLower()).Equals(input.ToLower()))
         {
-        _count++;
+          matchCount++;
         }
       }
+      _count = matchCount;
     }
 
     public static string[] SplitContent(string content)
@@ -81,6 +79,10 @@ namespace WordCounter.Models
     {
       return _id;
     }
+    // public void Save()
+    // {
+    //   _instances.Add(this);
+    // }
 
     public static Word Find(int searchId)
     {
