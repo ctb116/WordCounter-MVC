@@ -1,24 +1,24 @@
-WordCounter Pt2 specs
+##WordCounter Current State
 
-build user interface for last week's WordCounter
+1) User is greeted with a splash page "Welcome to Word Counter" with a link to Word Counter app. User clicks on Word Counter app.
 
-1) User sees a splash (homepage) when first visiting the site
+2) User is taken to Word Counter app "Word Counter" with url /wordcounter. First time on this page, User can only click "add a new word counter"
 
-2) from the homepage - user can click on the WordCounter game
+3) User is prompted to enter text and a key word to be searched for in the text.
 
-3) user sees wordCounter game instructions
-    a box to fill in large amounts of textform
-    a smaller box to fill in one word to be searched textform
+4) User is taken back to /wordcounter. Their keyword is added to page in a list.
 
-4) user sees result on the same screen and from there can repeat the process
+5) User can click the keyword and be taken to a details page containing the text they entered.
+
+6) User is prompted to click a button to see how frequently their keyword appeared in their text.
+
+7) Once button is clicked, app breaks and user sees default "welcome"
 
 
-Part 2 specs
+##Word Counter Desired Specs
 
-----User simply sees a list of inputed Keyword and Inputed Content----
+User follows steps 1-3 in above current state Specs
 
-Keyword and Content are currently put into the same list to be displayed
+4) user is taken back to /wordcounter. They see that their keyword, along with a number that represents how frequently it appeared in the text, has been added to a list on the page.
 
-1) put content in a details
-
-2) keyword and count will be what appears on the list - user clicks keyword and count to see original content text
+5) user can click on the keyword in the list and be taken to a details page containing the original text they entered as well as the keyword with the count of how often it appeared.

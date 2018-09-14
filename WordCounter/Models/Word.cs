@@ -48,7 +48,7 @@ namespace WordCounter.Models
       return _count;
     }
 
-
+// My intention was after MatchCheck ran it would overwrite _count in Public Class Word
     public void MatchCheck(string input)
     {
       string[] contentList = Word.SplitContent(_content);
@@ -83,7 +83,6 @@ namespace WordCounter.Models
     // {
     //   _instances.Add(this);
     // }
-
     public static Word Find(int searchId)
     {
       return _instances[searchId-1];
