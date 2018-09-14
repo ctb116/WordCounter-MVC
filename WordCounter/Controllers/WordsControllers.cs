@@ -36,13 +36,13 @@ namespace WordCounter.Controllers
       return View(keyword);
     }
 
-    [HttpPost("/wordcounter/{id}/count")]
-    public ActionResult Count(int id, string input)
-    {
-      List<Word> allword = Word.GetAll();
-      int find = id - 1;
-      allword[find].MatchCheck(input);
-      return View("Details", allword[find]);
-    }
+    // [HttpPost("/wordcounter/{id}/count")]
+    // public ActionResult Count(int id, string input)
+    // {
+    //   List<Word> allword = Word.GetAll();
+    //   int find = id - 1;
+    //   allword[find].MatchCheck(input);
+    //   return View("Details", allword[find]);
+    // }
   }
 }
