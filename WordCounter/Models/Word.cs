@@ -7,6 +7,7 @@ namespace WordCounter.Models
   {
     private string _input;
     private string _content;
+    private static List<Word> _instances = new List<Word> {};
 
     public Word (string input, string content)
     {
@@ -17,18 +18,26 @@ namespace WordCounter.Models
     {
       return _input;
     }
-    // public string SetInput(string input)
-    // {
-    //   _input = input;
-    // }
+    public void SetInput(string keyWord)
+    {
+      _input = keyWord;
+    }
     public string GetContent()
     {
       return _content;
     }
-    // public string SetContent(string content)
-    // {
-    //   _content = content;
-    // }
+    public void SetContent(string inputContent)
+    {
+      _content = inputContent;
+    }
+    public static List<Word> GetAll()
+    {
+      return _instances;
+    }
+    public void Save()
+    {
+      _instances.Add(this);
+    }
 
     // public int MatchCheck(string input)
     // {

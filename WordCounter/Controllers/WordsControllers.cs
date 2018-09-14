@@ -23,7 +23,9 @@ namespace WordCounter.Controllers
     [HttpPost("/wordcounter")]
     public ActionResult Create()
     {
-      return View("Index");
+      Word myword = new Word(Request.Form["new-keyword"], Request.Form["new-content"]);
+      List<Word> allword = Word.GetAll();
+      return View("Index", allword);
     }
   }
 }
