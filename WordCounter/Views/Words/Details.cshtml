@@ -1,7 +1,11 @@
 <h1>Text</h1>
 
-<p>You searched for this keyword: @Model.GetInput()</p>
+<p>You searched for this keyword: @Model.GetInput()  with @Model.GetCount()</p>
 
 <p>@Model.GetContent()</p>
+
+<form action="/wordcounter/@Model.GetId()/count" method="post">
+<button type="submit" value="Count">Count keyword</button>
+</form>
 
 <a href='/wordcounter'>Return to wordcounter list</a>

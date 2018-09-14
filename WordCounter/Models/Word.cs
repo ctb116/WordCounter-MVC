@@ -7,16 +7,20 @@ namespace WordCounter.Models
   {
     private string _input;
     private string _content;
+    private int _count;
     private int _id;
+
     private static List<Word> _instances = new List<Word> {};
 
     public Word (string input, string content)
     {
       _input = input;
       _content = content;
+      _count = 0;
       _instances.Add(this);
       _id = _instances.Count;
     }
+
     public string GetInput()
     {
       return _input;
@@ -25,6 +29,7 @@ namespace WordCounter.Models
     {
       _input = keyWord;
     }
+
     public string GetContent()
     {
       return _content;
@@ -33,42 +38,53 @@ namespace WordCounter.Models
     {
       _content = inputContent;
     }
+
+    public void SetCount(int start)
+    {
+      _count = start;
+    }
+    public int GetCount()
+    {
+      return _count;
+    }
+    public void test()
+    {
+      _count += 10;
+    }
+
+    public void MatchCheck(string input)
+    {
+      string[] contentList = Word.SplitContent(_content);
+
+      // int matchCount = 0;
+      foreach(string word in contentList)
+      {
+        if ((word.ToLower()).Equals(input.ToLower()))
+        {
+        _count++;
+        }
+      }
+    }
+
+    public static string[] SplitContent(string content)
+    {
+      string[] contentList = content.Replace(".", " ").Replace("?", " ").Replace("'", " ").Replace("!", " ").Split(' ');
+      return contentList;
+    }
+
     public static List<Word> GetAll()
     {
       return _instances;
     }
+
     public int GetId()
     {
       return _id;
     }
+
     public static Word Find(int searchId)
     {
       return _instances[searchId-1];
     }
-    // public void Save()
-    // {
-    //   _instances.Add(this);
-    // }
-
-    // public int MatchCheck(string input)
-    // {
-    //   string[] contentList = RepeatCounter.SplitContent(_content);
-    //
-    //   int matchCount = 0;
-    //   foreach(string word in contentList)
-    //   {
-    //     if ((word.ToLower()).Equals(input.ToLower()))
-    //     {
-    //     matchCount++;
-    //     }
-    //   }
-    //   return matchCount;
-    // }
-    //
-    // public static string[] SplitContent(string content)
-    // {
-    //   string[] contentList = content.Replace(".", " ").Replace("?", " ").Replace("'", " ").Replace("!", " ").Split(' ');
-    //   return contentList;
-    // }
   }
 }
