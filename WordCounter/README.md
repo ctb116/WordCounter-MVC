@@ -1,24 +1,57 @@
-##WordCounter Current State
+# _Word Counter Program with MVC_
 
-1) User is greeted with a splash page "Welcome to Word Counter" with a link to Word Counter app. User clicks on Word Counter app.
+#### _Week 7 Independent Project for Epicodus, 9.18.2018_
 
-2) User is taken to Word Counter app "Word Counter" with url /wordcounter. First time on this page, User can only click "add a new word counter"
+#### By _**Catherine Bradley**_
 
-3) User is prompted to enter text and a key word to be searched for in the text.
+## Description
 
-4) User is taken back to /wordcounter. Their keyword is added to page in a list.
+_This is a C# program with MVC._
 
-5) User can click the keyword and be taken to a details page containing the text they entered.
+_Word Counter Program allows Users to know how many times a given word appears in a given text. Users enter text and then the program asks the User to enter a word. The program returns a number representing how frequently that word appeared in the text._
 
-6) User is prompted to click a button to see how frequently their keyword appeared in their text.
+### Specifications
 
-7) Once button is clicked, app breaks and user sees default "welcome"
+* _1) User is greeted by a slash page_
+* _2) User navigates to Word Counter app and is able to create a new word counter checker._
+* _3) User enters text (first input) and a keyword (second input) and clicks a submit button_
+* _5) User sees their first input and second input added to a list along with a number of how frequently their keyword appeared in their text._
 
+  * Example Input(Text): _Hello there, Cat. I love my cat! Where are you, cat? She says she has a 'cat.'_
+  * Example Input(second): _cat_
+  * Example Output: _Your keyword "cat" appeared 4 time(s)_
 
-##Word Counter Desired Specs
+_Program can account for capitalization:_
+  * Example Input(Text): _cat CAT cAt CaT cAT Cat_
+  * Example Input(word): _cat_
+  * Example Output: _Your keyword "cat" appeared 6 time(s)_
 
-User follows steps 1-3 in above current state Specs
+_Program can account for basic grammar_
+  * Example Input(Text): _cat! cat. 'cat' cat? 'cat!'_
+  * Example Input(word): _cat_
+  * Example Output: _Your keyword "cat" appeared 5 time(s)_
 
-4) user is taken back to /wordcounter. They see that their keyword, along with a number that represents how frequently it appeared in the text, has been added to a list on the page.
+## Setup/Installation Requirements
 
-5) user can click on the keyword in the list and be taken to a details page containing the original text they entered as well as the keyword with the count of how often it appeared.
+* _Clone this repository_
+* _Navigate to WordCounter.Solution/WordCounter_
+* _Run app on localhost:5000_
+
+## Known Bugs
+
+* _Program can not account for words with "double quotes" but can for words with 'single quotes'_
+* _Users can only enter one word at a time._
+* _Users cannot search for a second keyword after their original text has been entered. User would have to reenter text with a second keyword._
+
+## Support and contact details
+
+_For feedback, please contact Catherine Bradley at catherinetybradley@gmail.com_
+
+## Technologies Used
+
+* _C#_
+* _MVC_
+
+### Legal
+
+*NA*

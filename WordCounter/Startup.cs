@@ -5,7 +5,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace ToDoList
+namespace WordCounter
 {
   public class Startup
   {
@@ -26,6 +26,8 @@ namespace ToDoList
 
     public void Configure(IApplicationBuilder app)
     {
+      app.UseDeveloperExceptionPage();
+      // app.UseStaticFiles();
       app.UseMvc(routes =>
     {
       routes.MapRoute(

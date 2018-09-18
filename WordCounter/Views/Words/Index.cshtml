@@ -1,8 +1,10 @@
 <h1>Word Counter</h1>
+
 <ul>
 @foreach(var x in Model)
 {
-<li><a href='/wordcounter/@x.GetId()'>@x.GetInput()</a></li>
+<li>Your keyword: "@x.GetInput()" appeared @x.GetCount() time(s). <br><br>Original Text <br>@x.GetContent()</li>
+<br>
 }
 </ul>
 
