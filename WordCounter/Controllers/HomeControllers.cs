@@ -4,9 +4,13 @@ namespace WordCounter.Controllers
 {
   public class HomeController : Controller
   {
-    public IActionResult Index()
+    [HttpGet("/")]
+    public ActionResult Index()
     {
       return View();
+
+      // To return no view and fail test
+      // return new EmptyResult();
     }
   }
 }
