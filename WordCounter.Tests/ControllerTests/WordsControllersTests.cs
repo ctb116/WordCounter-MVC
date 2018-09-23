@@ -19,6 +19,16 @@ namespace WordCounter.Tests
 
       Assert.IsInstanceOfType(indexView, typeof(ViewResult));
     }
+    [TestMethod]
+    public void CreateForm_HasCorrectModelView_True()
+    {
+
+      WordsController controller = new WordsController();
+
+      ActionResult createFormView = controller.CreateForm();
+
+      Assert.IsInstanceOfType(createFormView, typeof(ViewResult));
+    }
 
     // Problem with Act - "cannot convert type object to ViewResult"
 
@@ -33,6 +43,6 @@ namespace WordCounter.Tests
     //
     //   // Assert - If there is a list from Act above which is now result, compare to List
     //   Assert.IsInstanceOfType(result, typeof(List<Word>));
-    }
+    // }
   }
 }
