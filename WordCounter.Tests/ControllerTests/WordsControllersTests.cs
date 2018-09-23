@@ -30,7 +30,7 @@ namespace WordCounter.Tests
       Assert.IsInstanceOfType(createFormView, typeof(ViewResult));
     }
 
-    // Problem with Act - "cannot convert type object to ViewResult"
+    // Problem with Act - "cannot convert type object to ViewResult - epicodus Controller Testing C#"
 
     // [TestMethod]
     // public void Index_HasCorrectModelType_WordList()
